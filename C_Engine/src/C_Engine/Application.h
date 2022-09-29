@@ -3,7 +3,7 @@
 
 namespace C_Engine{
 
-	class CE_API Application
+	class C_Engine_API Application
 	{
 	public:
 		Application();
