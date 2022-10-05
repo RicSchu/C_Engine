@@ -79,7 +79,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>CE_PLATFORM_WINDOWS;CE_BUILD_DLL;CE_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>vendor\spdlog\include;src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -153,6 +153,10 @@ IF EXIST ..\bin\Dist-windows-x86_64\C_Engine\C_Engine.dll\ (xcopy /Q /E /Y /I ..
     <ClInclude Include="src\C_Engine\Application.h" />
     <ClInclude Include="src\C_Engine\Core.h" />
     <ClInclude Include="src\C_Engine\EntryPoint.h" />
+    <ClInclude Include="src\C_Engine\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\C_Engine\Events\Event.h" />
+    <ClInclude Include="src\C_Engine\Events\KeyEvent.h" />
+    <ClInclude Include="src\C_Engine\Events\MouseEvent.h" />
     <ClInclude Include="src\C_Engine\Log.h" />
   </ItemGroup>
   <ItemGroup>

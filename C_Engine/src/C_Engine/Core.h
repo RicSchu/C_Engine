@@ -9,3 +9,5 @@
 #else
 	#error C_Engine only supports Windows!
 #endif
+
+#define BIT(x) (1 << x)
