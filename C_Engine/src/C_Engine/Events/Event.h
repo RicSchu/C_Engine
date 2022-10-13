@@ -1,9 +1,8 @@
 #pragma once
 
+#include "CEpch.h"
 #include "Core.h"
 
-#include <string>
-#include <functional>
 
 namespace C_Engine {
 

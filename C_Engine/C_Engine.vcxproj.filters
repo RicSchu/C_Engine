@@ -4,8 +4,12 @@
     <Filter Include="C_Engine">
       <UniqueIdentifier>{9D4FBF8A-891C-1A96-B235-083E9E614F24}</UniqueIdentifier>
     </Filter>
+    <Filter Include="C_Engine\Events">
+      <UniqueIdentifier>{E1A8651E-4D34-D3E2-5645-56D7C24F2FE3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\CEpch.h" />
     <ClInclude Include="src\C_Engine.h" />
     <ClInclude Include="src\C_Engine\Application.h">
       <Filter>C_Engine</Filter>
@@ -16,20 +20,32 @@
     <ClInclude Include="src\C_Engine\EntryPoint.h">
       <Filter>C_Engine</Filter>
     </ClInclude>
+    <ClInclude Include="src\C_Engine\Events\ApplicationEvent.h">
+      <Filter>C_Engine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\C_Engine\Events\Event.h">
+      <Filter>C_Engine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\C_Engine\Events\KeyEvent.h">
+      <Filter>C_Engine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\C_Engine\Events\MouseEvent.h">
+      <Filter>C_Engine\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\C_Engine\Log.h">
       <Filter>C_Engine</Filter>
     </ClInclude>
-    <ClInclude Include="src\C_Engine\Events\ApplicationEvent.h" />
-    <ClInclude Include="src\C_Engine\Events\Event.h" />
-    <ClInclude Include="src\C_Engine\Events\KeyEvent.h" />
-    <ClInclude Include="src\C_Engine\Events\MouseEvent.h" />
+    <ClInclude Include="src\C_Engine\Window.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\CEpch.cpp" />
     <ClCompile Include="src\C_Engine\Application.cpp">
       <Filter>C_Engine</Filter>
     </ClCompile>
     <ClCompile Include="src\C_Engine\Log.cpp">
       <Filter>C_Engine</Filter>
     </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>

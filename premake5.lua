@@ -10,6 +10,13 @@ workspace "C_Engine"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include directories relative to root folder (solution directory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "C_Engine/vendor/GLFW/include"
+
+include "C_Engine/vendor/GLFW"
+
+
 project "C_Engine"
 	location "C_Engine"
 	kind "SharedLib"
@@ -18,6 +25,9 @@ project "C_Engine"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "CEpch.h"
+	pchsource "C_Engine/src/CEpch.cpp"
+	
 	files
 	{
 		"%{prj.name}/src/**.h",
@@ -27,7 +37,14 @@ project "C_Engine"
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links 
+	{ 
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"
@@ -49,14 +66,17 @@ project "C_Engine"
 
 	filter "configurations:Debug"
 		defines "CE_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "CE_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "CE_DIST"
+		buildoptions "/MD"
 		optimize "On"
 
 project "Sandbox"
@@ -96,12 +116,15 @@ project "Sandbox"
 
 	filter "configurations:Debug"
 		defines "CE_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "CE_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "CE_DIST"
+		buildoptions "/MD"
 		optimize "On"
