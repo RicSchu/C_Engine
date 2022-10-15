@@ -83,8 +83,7 @@
       <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <AdditionalOptions>/MDd %(AdditionalOptions)</AdditionalOptions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -111,8 +110,7 @@ IF EXIST ..\bin\Debug-windows-x86_64\C_Engine\C_Engine.dll\ (xcopy /Q /E /Y /I .
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -140,8 +138,7 @@ IF EXIST ..\bin\Release-windows-x86_64\C_Engine\C_Engine.dll\ (xcopy /Q /E /Y /I
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -158,7 +155,6 @@ IF EXIST ..\bin\Dist-windows-x86_64\C_Engine\C_Engine.dll\ (xcopy /Q /E /Y /I ..
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\C_Engine\ImGui\ImGuiLayer.h" />
     <ClInclude Include="src\CEpch.h" />
     <ClInclude Include="src\C_Engine.h" />
     <ClInclude Include="src\C_Engine\Application.h" />
@@ -168,24 +164,30 @@ IF EXIST ..\bin\Dist-windows-x86_64\C_Engine\C_Engine.dll\ (xcopy /Q /E /Y /I ..
     <ClInclude Include="src\C_Engine\Events\Event.h" />
     <ClInclude Include="src\C_Engine\Events\KeyEvent.h" />
     <ClInclude Include="src\C_Engine\Events\MouseEvent.h" />
+    <ClInclude Include="src\C_Engine\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="src\C_Engine\Input.h" />
+    <ClInclude Include="src\C_Engine\KeyCodes.h" />
     <ClInclude Include="src\C_Engine\Layer.h" />
     <ClInclude Include="src\C_Engine\LayerStack.h" />
     <ClInclude Include="src\C_Engine\Log.h" />
+    <ClInclude Include="src\C_Engine\MouseButtonCodes.h" />
     <ClInclude Include="src\C_Engine\Window.h" />
     <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\C_Engine\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="src\CEpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="src\C_Engine\Application.cpp" />
+    <ClCompile Include="src\C_Engine\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="src\C_Engine\Layer.cpp" />
     <ClCompile Include="src\C_Engine\LayerStack.cpp" />
     <ClCompile Include="src\C_Engine\Log.cpp" />
     <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="vendor\GLFW\GLFW.vcxproj">
