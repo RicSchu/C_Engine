@@ -158,6 +158,8 @@ IF EXIST ..\bin\Dist-windows-x86_64\C_Engine\C_Engine.dll\ (xcopy /Q /E /Y /I ..
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\C_Engine\LayerStack.h" />
+    <ClInclude Include="src\C_Engine\Layer.h" />
     <ClInclude Include="src\CEpch.h" />
     <ClInclude Include="src\C_Engine.h" />
     <ClInclude Include="src\C_Engine\Application.h" />
@@ -172,6 +174,8 @@ IF EXIST ..\bin\Dist-windows-x86_64\C_Engine\C_Engine.dll\ (xcopy /Q /E /Y /I ..
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\C_Engine\LayerStack.cpp" />
+    <ClCompile Include="src\C_Engine\Layer.cpp" />
     <ClCompile Include="src\CEpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>

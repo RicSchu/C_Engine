@@ -1,16 +1,22 @@
 #include <C_Engine.h>
 
-class Sandbox : public C_Engine::Application {
+
+class Sandbox : public C_Engine::Application
+{
 public:
-	Sandbox() {
+	Sandbox()
+	{
+		CE_INFO("Starting Sandbox");
+	}
+
+	~Sandbox()
+	{
 
 	}
 
-	~Sandbox() {
-
-	}
 };
 
-C_Engine::Application* C_Engine::CreateApplication() {
+C_Engine::Application* C_Engine::CreateApplication()
+{
 	return new Sandbox();
 }

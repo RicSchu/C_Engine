@@ -37,6 +37,8 @@
     </ClInclude>
     <ClInclude Include="src\C_Engine\Window.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
+    <ClInclude Include="src\C_Engine\Layer.h" />
+    <ClInclude Include="src\C_Engine\LayerStack.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\CEpch.cpp" />
@@ -47,5 +49,7 @@
       <Filter>C_Engine</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
+    <ClCompile Include="src\C_Engine\Layer.cpp" />
+    <ClCompile Include="src\C_Engine\LayerStack.cpp" />
   </ItemGroup>
 </Project>
