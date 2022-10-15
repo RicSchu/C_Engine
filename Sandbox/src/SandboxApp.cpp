@@ -16,6 +16,7 @@ public:
 	{
 		CE_INFO("Starting Sandbox");
 		PushLayer(new ExampleLayer());
+		PushOverlay(new C_Engine::ImGuiLayer());
 	}
 
 	~Sandbox()

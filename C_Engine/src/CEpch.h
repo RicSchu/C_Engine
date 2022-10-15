@@ -14,6 +14,8 @@
 
 #include "C_Engine/Log.h"
 
+#include "C_Engine/ImGui/ImGuiLayer.h"
+
 #ifdef CE_PLATFORM_WINDOWS
 	#include <Windows.h>
 #endif
