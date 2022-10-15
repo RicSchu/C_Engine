@@ -1,3 +1,5 @@
+--generate project files
+
 workspace "C_Engine"
 	architecture "x64"
 
@@ -13,8 +15,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "C_Engine/vendor/GLFW/include"
+IncludeDir["Glad"] = "C_Engine/vendor/Glad/include"
 
 include "C_Engine/vendor/GLFW"
+include "C_Engine/vendor/Glad"
 
 
 project "C_Engine"
@@ -38,12 +42,14 @@ project "C_Engine"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
 	}
 
 	links 
 	{ 
 		"GLFW",
+		"Glad",
 		"opengl32.lib"
 	}
 
@@ -55,7 +61,8 @@ project "C_Engine"
 		defines
 		{
 			"CE_PLATFORM_WINDOWS",
-			"CE_BUILD_DLL"
+			"CE_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands

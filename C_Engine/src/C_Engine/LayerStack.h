@@ -7,7 +7,7 @@
 
 namespace C_Engine {
 
-	class LayerStack
+	class C_Engine_API LayerStack
 	{
 	public:
 		LayerStack();

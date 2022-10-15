@@ -5,7 +5,7 @@
 
 namespace C_Engine {
 
-	class Layer
+	class C_Engine_API Layer
 	{
 	public:
 		Layer(const std::string& name = "Layer");

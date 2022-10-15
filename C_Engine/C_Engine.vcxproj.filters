@@ -7,6 +7,12 @@
     <Filter Include="C_Engine\Events">
       <UniqueIdentifier>{E1A8651E-4D34-D3E2-5645-56D7C24F2FE3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\CEpch.h" />
@@ -32,24 +38,38 @@
     <ClInclude Include="src\C_Engine\Events\MouseEvent.h">
       <Filter>C_Engine\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\C_Engine\Layer.h">
+      <Filter>C_Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\C_Engine\LayerStack.h">
+      <Filter>C_Engine</Filter>
+    </ClInclude>
     <ClInclude Include="src\C_Engine\Log.h">
       <Filter>C_Engine</Filter>
     </ClInclude>
-    <ClInclude Include="src\C_Engine\Window.h" />
-    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
-    <ClInclude Include="src\C_Engine\Layer.h" />
-    <ClInclude Include="src\C_Engine\LayerStack.h" />
+    <ClInclude Include="src\C_Engine\Window.h">
+      <Filter>C_Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\CEpch.cpp" />
     <ClCompile Include="src\C_Engine\Application.cpp">
       <Filter>C_Engine</Filter>
     </ClCompile>
+    <ClCompile Include="src\C_Engine\Layer.cpp">
+      <Filter>C_Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\C_Engine\LayerStack.cpp">
+      <Filter>C_Engine</Filter>
+    </ClCompile>
     <ClCompile Include="src\C_Engine\Log.cpp">
       <Filter>C_Engine</Filter>
     </ClCompile>
-    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
-    <ClCompile Include="src\C_Engine\Layer.cpp" />
-    <ClCompile Include="src\C_Engine\LayerStack.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
