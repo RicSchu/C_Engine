@@ -1,5 +1,4 @@
 #pragma once
-//#include "CEpch.h"
 #include "Core.h"
 #include "Window.h"
 #include "C_Engine/LayerStack.h"
@@ -9,10 +8,13 @@
 
 namespace C_Engine{
 
+
 	class C_Engine_API Application
 	{
 	public:
 		Application();
+
+		//virtual destructor since the class Application is inherited in Sandbox
 		virtual ~Application();
 		void Run();
 

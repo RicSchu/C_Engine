@@ -39,7 +39,7 @@ namespace C_Engine {
 		virtual bool IsVSync() const = 0;
 
 		virtual void* GetNativeWindow() const = 0;
-
+		//Platform specific implementation
 		static Window* Create(const WindowProps& props = WindowProps());
 	};
 

@@ -1,3 +1,8 @@
+/*
+Key events occur when keyboard keys are pressed and released. Each action is treated
+as a separate event in code. For Key presses, the repeat count is gathered 
+*/
+
 #pragma once
 #include "Event.h"
 

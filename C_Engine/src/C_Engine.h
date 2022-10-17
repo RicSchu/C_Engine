@@ -1,5 +1,4 @@
 #pragma once
-
 // For use by applications using C_Engine
 
 #include "C_Engine/Application.h"

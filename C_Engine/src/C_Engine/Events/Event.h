@@ -6,11 +6,7 @@
 
 namespace C_Engine {
 
-	// Events in CE are currently blocking, meaning when an event occurs it
-	// immediately gets dispatched and must be dealt with right then an there.
-	// For the future, a better strategy might be to buffer events in an event
-	// bus and process them during the "event" part of the update stage.
-
+//Lists event types defined for C_Engine
 	enum class EventType
 	{
 		None = 0,
@@ -20,6 +16,7 @@ namespace C_Engine {
 		MouseButtonPressed, MouseButtonReleased, MouseMoved, MouseScrolled
 	};
 
+//BIT fields for filtering events. BIT fields make it possible to apply multiple categories to events
 	enum EventCategory
 	{
 		None = 0,
@@ -30,6 +27,8 @@ namespace C_Engine {
 		EventCategoryMouseButton = BIT(4)
 	};
 
+
+//Macros for getting event type and class category
 #define EVENT_CLASS_TYPE(type) static EventType GetStaticType() { return EventType::##type; }\
 								virtual EventType GetEventType() const override { return GetStaticType(); }\
 								virtual const char* GetName() const override { return #type; }
@@ -39,6 +38,7 @@ namespace C_Engine {
 	class C_Engine_API Event
 	{
 	public:
+		//init state: event is not handled 
 		bool Handled = false;
 
 		virtual EventType GetEventType() const = 0;
@@ -52,6 +52,8 @@ namespace C_Engine {
 		}
 	};
 
+
+	//Type-based dispatch of events
 	class EventDispatcher
 	{
 		template<typename T>

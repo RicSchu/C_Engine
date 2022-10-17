@@ -1,5 +1,5 @@
 #pragma once
-
+// Returns X,Y screen-coordinates of the mouse position
 #include "Event.h"
 
 

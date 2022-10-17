@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Event.h"
-
+//Defines application-specific events (window, tick, update and render events)
 
 namespace C_Engine {
 

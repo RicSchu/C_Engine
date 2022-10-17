@@ -2,6 +2,7 @@
 
 #ifdef CE_PLATFORM_WINDOWS
 
+//Located in SandboxApp.cpp
 extern C_Engine::Application* C_Engine::CreateApplication();
 
 //Creates and destroys application

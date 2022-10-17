@@ -1,5 +1,6 @@
 #pragma once
-//Macros for dllimport and dllexport
+//Macros for dllimport and dllexport - which are Windows-specific, so we check for OS initially
+
 #ifdef CE_PLATFORM_WINDOWS
 	#ifdef CE_BUILD_DLL
 		#define C_Engine_API __declspec(dllexport)
@@ -14,6 +15,7 @@
 #define CE_ENABLE_ASSERTS
 #endif
 
+//Enables assertions - Check for a condition, break and log if false
 #ifdef CE_ENABLE_ASSERTS
 #define CE_ASSERT(x, ...) { if(!(x)) { CE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
 #define CE_CORE_ASSERT(x, ...) { if(!(x)) { CE_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }

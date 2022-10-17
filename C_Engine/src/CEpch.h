@@ -1,5 +1,9 @@
 #pragma once
+/*
+A precompiled header (PCH) is a header file that is compiled to an intermediate binary PCH
+that compiles faster, thus reducing total compilation time.
 
+*/
 #include <iostream>
 #include <memory>
 #include <utility>

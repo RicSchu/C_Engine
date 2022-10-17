@@ -1,3 +1,6 @@
+//Dear ImGui is a graphical User Interface. We use Imgui in order to manipulate 
+//the gui for the meantime, and provide a certain amount of interactivity
+
 #include "CEpch.h"
 #include "ImGuiLayer.h"
 

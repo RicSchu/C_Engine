@@ -4,6 +4,13 @@
 #include "spdlog/spdlog.h"
 #include "spdlog/fmt/ostr.h"
 
+
+/*
+spdlog-based logging.
+We eschew the spdlog API for our engine in order to be able to replace it more easily
+*/
+
+
 namespace C_Engine {
 
 	class C_Engine_API Log
