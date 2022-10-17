@@ -1,9 +1,6 @@
 [submodule "C_Engine/vendor/spdlog"]
 	path = C_Engine/vendor/spdlog
 	url = https://github.com/gabime/spdlog
-[submodule "C_Engine/vendor/GLFW"]
-	path = C_Engine/vendor/GLFW
-	url = https://github.com/TheCherno/glfw
 [submodule "C_Engine/vendor/imgui"]
 	path = C_Engine/vendor/imgui
 	url = https://github.com/RicSchu/imgui
